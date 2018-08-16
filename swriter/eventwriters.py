@@ -111,10 +111,9 @@ class EventWriters(object):
             realevent = event
         writer = self.get_real_writer(key)
         writer.WriteEvent(realevent)
-        writer.Flush()
 
     def Flush(self):
-        pass
+        self.flush()
 
 
 class _EventLoggerThread(threading.Thread):
